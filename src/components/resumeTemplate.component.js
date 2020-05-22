@@ -1,62 +1,75 @@
 import React from "react";
+import "../styles/resumeTemplate.css";
 
 const ResumeTemplate = ({ data }) => {
   return (
-    <div className="container">
-      <section>
+    <div className="container px-0 mt-2" id="template">
+      <section id="basics">
         <h1>{data.basics.name}</h1>
-        <p>
-          {data.basics.phone} | {data.basics.email} |{" "}
-          {data.basics.location.address}
-          {data.basics.location.city}
-          {data.basics.location.postalCode}
+        <p className="row justify-content-center">
+          {data.basics.location.address}, {data.basics.location.city},{" "}
+          {data.basics.location.postalCode} |{data.basics.phone} |{" "}
+          {data.basics.email}
         </p>
-  <p>{data.basics.profiles.map((profile,i)=>(
-      <span key={i}>{profile.network} : <a href={profile.url}>{profile.username} | </a></span>
-  ))}</p>
+        <p className="profiles">
+          {data.basics.profiles.map((profile, i) => (
+            <span key={i}>
+              {profile.network} : <a href={profile.url}>{profile.username}</a>
+            </span>
+          ))}
+        </p>
       </section>
       <section>
-        <h1>SUMMARY</h1>
+        <h2>SUMMARY</h2>
+        <hr></hr>
         <p>{data.basics.summary}</p>
       </section>
       <section>
-        <h1>SKILLS</h1>
-        <ul>
+        <h2>SKILLS</h2>
+        <hr></hr>
+        <ul className="row">
           {data.skills.map((data, i) => (
-            <li key={i}>{data.name}</li>
+            <li key={i} className="col-4">
+              {data.name}
+            </li>
           ))}
         </ul>
       </section>
       <section>
-        <h1>EDUCATION</h1>
+        <h2>EDUCATION</h2>
+        <hr></hr>
         {data.education.map((data, i) => (
           <div key={i}>
-            <p>
-              {data.institution} | {data.startDate}-{data.endDate}
+            <p className="experienceTitle">
+              {data.institution}
+              <span className="date">
+                {data.startDate} to {data.endDate}
+              </span>
             </p>
-            <p>
-              {data.studyType} of {data.area}
+            <p className="italic">
+              {data.studyType} of {data.area} (GPA: {data.gpa})
             </p>
-            <p>
+            <p className="courses">
               Relative Course:{" "}
               {data.courses.map((course, i) => (
                 <span key={i}>{course};</span>
               ))}
             </p>
-            <p>GPA: {data.gpa}</p>
           </div>
         ))}
       </section>
       <section>
-        <h1>Work experience</h1>
+        <h2>Work experience</h2>
+        <hr></hr>
         {data.work.map((work, i) => (
           <div key={i}>
-            <p>
+            <p className="experienceTitle">
               {work.name},{work.location}
+              <span className="date">
+                {work.startDate}-{work.endDate}
+              </span>
             </p>
-            <p>
-              {work.position} | {work.startDate}-{work.endDate}
-            </p>
+            <p className="italic">{work.position}</p>
             <ul>
               {work.highlights.map((hl, i) => (
                 <li key={i}>{hl}</li>
@@ -66,15 +79,17 @@ const ResumeTemplate = ({ data }) => {
         ))}
       </section>
       <section>
-        <h1>projects</h1>
+        <h2>projects</h2>
+        <hr></hr>
         {data.projects.map((project, i) => (
           <div key={i}>
-            <p>
-              {project.name} {project.type}| {project.startDate}-
-              {project.endDate}
+            <p className="experienceTitle">
+              {project.name} {project.type}{" "}
+              <span className="date">
+                {project.startDate} to {project.endDate}
+              </span>
             </p>
-            <p>
-              roles:{" "}
+            <p className="italic">
               {project.roles.map((role, i) => (
                 <span key={i}>{role} </span>
               ))}
@@ -89,25 +104,35 @@ const ResumeTemplate = ({ data }) => {
         ))}
       </section>
       <section>
-        <h1>Awards</h1>
-        {data.awards.map((award, i) => (
-          <div key={i}>
-            <p>title: {award.title}</p>
-            <p>date:{award.date}</p>
-            <p>awarder:{award.awarder}</p>
+        <div className="row">
+          <div className="col-6">
+            <h2>Awards</h2>
+            <hr></hr>
+            <ul className="details">
+              {data.awards.map((award, i) => (
+                <li key={i}>
+                  <p className="experienceTitle">Title: {award.title}</p>
+                  <p>Date:{award.date}</p>
+                  <p>Awarder:{award.awarder}</p>
+                </li>
+              ))}
+            </ul>
           </div>
-        ))}
-      </section>
-      <section>
-        <h1>publications</h1>
-        {data.publications.map((pb, i) => (
-          <div key={i}>
-            <p>name:{pb.name}</p>
-            <p>date:{pb.releaseDate}</p>
-            <p>publisher:{pb.publisher}</p>
-            <p>summary:{pb.summary}</p>
+          <div className="col-6">
+            <h2>publications</h2>
+            <hr></hr>
+            <ul className="details">
+              {data.publications.map((pb, i) => (
+                <li key={i}>
+                  <p className="experienceTitle">Name:{pb.name}</p>
+                  <p>Date:{pb.releaseDate}</p>
+                  <p>Publisher:{pb.publisher}</p>
+                  <p>Summary:{pb.summary}</p>
+                </li>
+              ))}
+            </ul>
           </div>
-        ))}
+        </div>
       </section>
     </div>
   );
