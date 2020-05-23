@@ -3,7 +3,7 @@ import "../styles/resumeTemplate.css";
 
 const ResumeTemplate = ({ data }) => {
   return (
-    <div className="container px-0 mt-2" id="template">
+    <div className="container mt-2" id="template">
       <section id="basics">
         <h1>{data.basics.name}</h1>
         <p className="row justify-content-center">
@@ -24,13 +24,13 @@ const ResumeTemplate = ({ data }) => {
         <hr></hr>
         <p>{data.basics.summary}</p>
       </section>
-      <section>
+      <section id="skills">
         <h2>SKILLS</h2>
         <hr></hr>
         <ul className="row">
-          {data.skills.map((data, i) => (
+          {data.skills.map((skill, i) => (
             <li key={i} className="col-4">
-              {data.name}
+              {skill.name}
             </li>
           ))}
         </ul>

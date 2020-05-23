@@ -1,11 +1,16 @@
 #root{
-    max-width: 800px;
     margin-right: auto;
     margin-left: auto;
-    border: 1px solid black;
-    padding: 15px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+#root #template{
+    max-width: 800px;
+    border: 1px solid black;
+    padding: 15px 20px 15px 20px;
+}
+#skills li{
+    padding-left: 2px;
 }
 .container{
     font-weight: 200;
