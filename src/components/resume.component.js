@@ -14,7 +14,8 @@ export default class Resume extends Component {
   render() {
     return (
       <div className="row">
-        <div className="col-3"></div>
+        <div className="col-3">
+        </div>
         <div className="col-9">
           <ResumeTemplate data={this.state.data} />
         </div>

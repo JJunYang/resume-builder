@@ -2,8 +2,6 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Richard Hendriks",
-    "label": "Programmer",
-    "image": "",
     "email": "richard.hendriks@mail.com",
     "phone": "(912) 555-4321",
     "url": "http://richardhendricks.example.com",
@@ -19,7 +17,7 @@
       {
         "network": "Twitter",
         "username": "neutralthoughts",
-        "url": ""
+        "url": "https://example.twitter.com"
       },
       {
         "network": "SoundCloud",
@@ -32,12 +30,9 @@
     {
       "name": "Pied Piper",
       "location": "Palo Alto, CA",
-      "description": "Awesome compression company",
       "position": "CEO/President",
-      "url": "http://piedpiper.example.com",
       "startDate": "2013-12-01",
       "endDate": "2014-12-01",
-      "summary": "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.",
       "highlights": [
         "Build an algorithm for artist to detect if their music was violating copy right infringement laws",
         "Successfully won Techcrunch Disrupt",
@@ -45,23 +40,9 @@
       ]
     }
   ],
-  "volunteer": [
-    {
-      "organization": "CoderDojo",
-      "position": "Teacher",
-      "url": "http://coderdojo.example.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Global movement of free coding clubs for young people.",
-      "highlights": [
-        "Awarded 'Teacher of the Month'"
-      ]
-    }
-  ],
   "education": [
     {
       "institution": "University of Oklahoma",
-      "url": "https://www.ou.edu/",
       "area": "Information Technology",
       "studyType": "Bachelor",
       "startDate": "2011-06-01",
@@ -86,49 +67,17 @@
       "name": "Video compression for 3d media",
       "publisher": "Hooli",
       "releaseDate": "2014-10-01",
-      "url": "http://en.wikipedia.org/wiki/Silicon_Valley_(TV_series)",
       "summary": "Innovative middle-out compression algorithm that changes the way we store data."
     }
   ],
   "skills": [
     {
       "name": "Web Development",
-      "level": "Master",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "Javascript"
-      ]
+      "level": "Master"
     },
     {
       "name": "Compression",
-      "level": "Master",
-      "keywords": [
-        "Mpeg",
-        "MP4",
-        "GIF"
-      ]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Native speaker"
-    }
-  ],
-  "interests": [
-    {
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
-      ]
-    }
-  ],
-  "references": [
-    {
-      "name": "Erlich Bachman",
-      "reference": "It is my pleasure to recommend Richard, his performance working as a consultant for Main St. Company proved that he will be a valuable addition to any company."
+      "level": "Master"
     }
   ],
   "projects": [
@@ -140,22 +89,12 @@
         "Built by all women team of newbie programmers",
         "Using modern technologies such as GoogleMaps, Chrome Extension and Javascript"
       ],
-      "keywords": [
-        "GoogleMaps", "Chrome Extension", "Javascript"
-      ],
       "startDate": "2016-08-24",
       "endDate": "2016-08-24", 
-      "url": "missdirection.example.com",
       "roles": [ 
         "Team lead", "Designer"
       ],
-      "entity": "Smoogle",
       "type": "application"
     }
-  ],
-  "meta": {
-    "canonical": "https://raw.githubusercontent.com/jsonresume/resume-schema/master/resume.json",
-    "version": "v1.0.0",
-    "lastModified": "2017-12-24T15:53:00"
-  }
+  ]
 }
